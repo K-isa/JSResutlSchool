@@ -1,0 +1,23 @@
+const coffees = ['Latte', 'Cappuccino', 'Americano'];
+const prices = [1.5, 1, 2];
+
+const coffee = prompt('Поиск кофе по названию:');
+
+const search = coffees.find((cof) => {
+  return cof === coffee;
+})
+
+const number = coffees.findIndex((a) => {
+  return a === search
+})
+
+const newprices = prices.map((cost) => {
+  return cost + (cost / 2)
+})
+
+if (search) {
+  alert(`Держите ваш любимый кофе ${search}. Он ${number + 1}-й по популярности в нашей кофейне.`);
+  alert(`Кофе ${search} сейчас стоит ${newprices[number]} евро`);
+} else {
+  alert(`К сожалению, такого кофе нет в налиичии`);
+}
