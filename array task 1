@@ -1,0 +1,18 @@
+const peopleWaiting = ['Кристина', 'Олег', 'Кирилл', 'Мария', 'Светлана', 'Артем', 'Глеб'];
+
+function giveParcel() {
+  for (let i = peopleWaiting.length; i > 4; i -= 1) {
+    ClientName = peopleWaiting.shift();
+    alert(`${ClientName} получил(а) посылку. В очереди осталось ${i} человек.`);
+}
+}
+
+function CannotgiveParcel() {
+  for (let i = peopleWaiting.length; i > 0; i -= 1) {
+    ClientName = peopleWaiting.shift();
+    alert(`${ClientName} не получил(а) посылку и ушел(ла) из очереди.`);
+}
+}
+
+giveParcel();
+CannotgiveParcel();
