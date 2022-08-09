@@ -1,0 +1,14 @@
+function getDivisorsCount (number) {
+  if (number <0) {
+    alert(`Число должно быть целым числом и больше нуля!`);
+} else if (number >=0) {
+  count = 0;
+  for (let i = 1; i <= number; i++) {
+    if (number % i == 0) {
+      count += 1;
+    }
+  }
+}
+return count;
+}
+console.log(getDivisorsCount(prompt('Введите число')))
