@@ -1,0 +1,10 @@
+function getSumOfSequence(number) {
+  const NumberArray = []
+  for (let i = 1; i != number +1; i += 1) {
+    NumberArray.push(i);
+  }
+  lastnumber = NumberArray.pop();
+  alert(NumberArray[0] + lastnumber);
+}
+
+getSumOfSequence(4)
