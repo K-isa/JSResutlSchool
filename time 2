@@ -1,0 +1,6 @@
+function getDaysBeforeBirthday (nextBirthdayDate) {
+  let nowdate = new Date()
+  alert(Math.floor((nextBirthdayDate.getTime() - nowdate.getTime()) / 1000 / 60 / 60 / 24))
+}
+
+getDaysBeforeBirthday(new Date(2023, 7, 3))
