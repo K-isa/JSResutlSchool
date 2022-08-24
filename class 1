@@ -1,0 +1,24 @@
+class Student1 {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    this.technologies = [];
+    this.status = 'Junior';
+  }
+
+setNewStatus(newStatus) {
+  this.status = newStatus;
+}
+
+setTechnologies(technologies) {
+  this.technologies = [
+    ...this.technologies,
+    ...technologies,
+  ];
+}
+}
+
+const student1 = new Student1('Maxim', 20);
+student1.setTechnologies(['HTML', 'CSS', 'JavaScript']);
+student1.setNewStatus('Middle');
+console.log(student1);
