@@ -1,0 +1,12 @@
+function giveJobToStudent(student, jobname) {
+  student.job = jobname;
+  alert(`Поздравляем! У студента ${student.fullName} появилась новая работа! Теперь он ${student.job}`);
+}
+
+const student = {
+  fullName: 'Максим',
+  experienceInMonths: 12,
+  stack: ['HTML', 'CSS', 'JavaScript', 'React'],
+}
+
+giveJobToStudent(student, 'веб-разработчик')
