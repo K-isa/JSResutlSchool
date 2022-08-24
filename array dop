@@ -1,0 +1,12 @@
+const goals = [8, 1, 1, 3, 2, -1, 5];
+
+let MaxGoal = Math.max.apply(null, goals);
+let number = goals.indexOf(MaxGoal);
+
+const numberOfGoals = goals.reduce((partialSum, a) => partialSum + a, 0);
+
+
+
+alert(`Самый результативный матч был под номером ${number + 1}. В нем было забито ${MaxGoal} гол(ов).`);
+alert(`Общее количество голов за сезон равно ${numberOfGoals}`);
+alert(`${numberOfGoals / goals.length}`);
