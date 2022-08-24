@@ -1,0 +1,26 @@
+function makeDomestic(isDomestic) {
+  console.log(`${this.type} по имени ${this.name} говорит ${this.makeSound()}`);
+  this["isDomestic"] = isDomestic;
+  console.log(this)
+}
+
+
+const dog = {
+  name: 'Чарли',
+  type: 'Собака',
+  makeSound() {
+    return 'Гав-Гав';
+  }
+}
+
+const bird = {
+  name: 'Петя',
+  type: 'Воробей',
+  makeSound() {
+    return 'Чик-чирик';
+  }
+}
+
+makeDomestic.call(dog, true);
+makeDomestic.apply(dog, [true]);
+makeDomestic.bind(dog, true) ();
