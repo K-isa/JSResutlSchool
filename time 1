@@ -1,0 +1,20 @@
+function getDateFormat (date, separator = '.') {
+  const formatnumber = (number) => {
+    if (number < 10) {
+      return `0${number}`
+    } else {
+      return number
+    }
+  }
+
+    if (separator === '.') {
+      alert(`${formatnumber(date.getDate())}${separator}${formatnumber(date.getMonth())}${separator}${date.getFullYear()}`)
+    } else {
+      alert(`${date.getFullYear()}${separator}${formatnumber(date.getMonth())}${separator}${formatnumber(date.getDate())}`)
+    }
+}
+
+const newdate = new Date(2011, 11, 11)
+console.log(newdate)
+
+getDateFormat(newdate, '.');
