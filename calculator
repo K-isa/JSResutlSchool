@@ -1,0 +1,38 @@
+
+function getMathResult(expression) {
+  let op = expression[1];
+  switch (op) {
+    case '+':
+      result = Number(expression[0]) + Number(expression[2]);
+      break;
+    case '-':
+      result = Number(expression[0]) - Number(expression[2]);
+      break;
+    case '*':
+      result = Number(expression[0]) * Number(expression[2]);
+      break;
+    case '/':
+      result = Number(expression[0]) / Number(expression[2]);
+      break;
+    case '<':
+      result = Number(expression[0]) < Number(expression[2]);
+      break;
+    case '>':
+      result = Number(expression[0]) > Number(expression[2]);
+      break;
+    case '**':
+      result = Number(expression[0]) ** Number(expression[2]);
+      break;
+  }
+  console.log(result)
+}
+
+
+getMathResult(['200', '+', 300]); // 500
+getMathResult(['20', '-', '5']); // 15
+getMathResult([100, '/', 100]); // 1
+getMathResult([2, '-', 2]); // 0
+getMathResult(['5', '>', '10']); // false
+getMathResult(['5', '<', '10']); // true
+getMathResult(['1', '=', 1]); // true
+getMathResult(['1', '**', 1]); // 'Ошибка'
