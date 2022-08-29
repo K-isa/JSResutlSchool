@@ -1,0 +1,57 @@
+/* <form class="create-user-form">
+    <label>
+        Имя
+        <input type="text" name="userName" placeholder="Введите ваше имя">
+    </label>
+    <label>
+        Пароль
+        <input type="password" name="password" placeholder="Придумайте Пароль">
+    </label>
+    <button type="submit">
+        Подтвердить
+    </button>
+</form> */
+
+
+const create_user_input = (label, inputType, inputName, placeholder,) => {
+  const labelContainer = document.createElement('label');
+  labelContainer.innerText = label;
+  const inputElement = document.createElement('input');
+  inputElement.type = inputType;
+  inputElement.name = inputName;
+  inputElement.placeholder = placeholder;
+
+  labelContainer.append(inputElement);
+
+  return labelContainer;
+};
+
+const form_container = document.createElement('form');
+form_container.className = "create-user-form";
+const label_name = create_user_input('Имя', 'text', 'userName', 'Введите ваше имя');
+const label_password = create_user_input('Пароль', 'password', 'password', 'Придумайте пароль');
+const button = document.createElement('button');
+button.type = 'submit';
+button.innerText = 'Подтвердить';
+form_container.append(label_name, label_password, button);
+document.body.prepend(form_container);
+
+
+
+
+// document.body.innerHTML = `
+// <form class="create-user-form">
+//     <label>
+//         Имя
+//         <input type="text" name="userName" placeholder="Введите ваше имя">
+//     </label>
+//     <label>
+//         Пароль
+//         <input type="password" name="password" placeholder="Придумайте Пароль">
+//     </label>
+//     <button type="submit">
+//         Подтвердить
+//     </button>
+// </form>
+// `;
+
